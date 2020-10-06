@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Level 3 - Colour Mixing</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="levelThree" class="currentLevel">
+    <div id="levels-wrapper">
+
+
+
+        <header class="game-header">
+            <div class="game-header--back-button">
+                <a href="index.html">
+                    Back to main menu</a> </div> <div class="game-header--logo">
+            </div>
+        </header>
+
+        <section class="game-panel">
+            <div class="game-panel--avatar">
+                <div class="game-avatar" id="avatarLevel"></div>
+
+            </div>
+            <div class="game-panel--description">
+                <p>Rules: You take colours from the left (red, green, blue) and put them into boxes on the right side.
+                    The colours you need to create with them are on the right side (teal, pink, yellow). For each
+                    colour, we will tell you if you are right or wrong. The faster you finish the level, the more score points you get.</p>
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <div id="level-three">
+            <div class="score">
+                <h2>Score</h2>
+                <p>Your total score:</p>
+                <p id="score"></p>
+                <div class="levelOne-nextRound">
+                    <div class="levelOne-nextRound__button">
+                        <form action="index.html">
+                            <input type="text" name="username" id="username" placeholder="Enter Username">
+                            <button type="submit" id="saveScoreBtn">Save</button>
+                        </form>
+                    </div>
+                    <h2>Timer</h2>
+                    <p>Bonus points timer:</p>
+                    <p id="timer">0</p>
+                    <button id="btnModal">Need help?</button>
+                </div>
+            </div>
+
+            <div id="levelThree-leftPanel">
+                <div id="colourSquares">
+                    <div class="dragArea red"></div>
+                    <div class="dragArea green"></div>
+                    <div class="dragArea blue"></div>
+                    <div class="dragArea cyan"></div>
+                    <div class="dragArea magenta"></div>
+                    <div class="dragArea yellow"></div>
+                </div>
+            </div>
+
+
+            <div id="levelThree-rightPanel">
+
+                <!-- ------------------------------------------------- -->
+                <div class="row row1">
+                    <div class="dropArea row1column1"></div>
+                    <div class="operatorPlus">+</div>
+                    <div class="dropArea row1column2"></div>
+                    <div class="operatorEqual">=</div>
+                    <div class="finalColour row1column3 cyan">
+                        <p>Cyan</p>
+                    </div>
+                    <div class="trueCheck trueCheck1"></div>
+                </div>
+                <!-- ------------------------------------------------- -->
+                <div class="row row2">
+                    <div class="dropArea row2column1"></div>
+                    <div class="operatorPlus">+</div>
+                    <div class="dropArea row2column2"></div>
+                    <div class="operatorEqual">=</div>
+                    <div class="finalColour row2column3 magenta">
+                        <p>Magenta</p>
+                    </div>
+                    <div class="trueCheck trueCheck2"></div>
+                </div>
+                <!-- ------------------------------------------------- -->
+                <div class="row row3">
+                    <div class="dropArea row3column1"></div>
+                    <div class="operatorPlus">+</div>
+                    <div class="dropArea row3column2"></div>
+                    <div class="operatorEqual">=</div>
+                    <div class="finalColour row3column3 yellow">
+                        <p>Yellow</p>
+                    </div>
+                    <div class="trueCheck trueCheck3"></div>
+                </div>
+                <!-- ------------------------------------------------- -->
+                <div class="row row4">
+                    <div class="dropArea row4column1"></div>
+                    <div class="operatorPlus">+</div>
+                    <div class="dropArea row4column2"></div>
+                    <div class="operatorEqual">=</div>
+                    <div class="finalColour row4column3 orange">
+                        <p>Orange</p>
+                    </div>
+                    <div class="trueCheck trueCheck4"></div>
+                </div>
+                <!-- ------------------------------------------------- -->
+                <div class="row row5">
+                    <div class="dropArea row5column1"></div>
+                    <div class="operatorPlus">+</div>
+                    <div class="dropArea row5column2"></div>
+                    <div class="operatorEqual">=</div>
+                    <div class="finalColour row5column3 springGreen">
+                        <p>Spring <br>Green</p>
+                    </div>
+                    <div class="trueCheck trueCheck5"></div>
+                </div>
+                <!-- ------------------------------------------------- -->
+                <div class="row row6">
+                    <div class="dropArea row6column1"></div>
+                    <div class="operatorPlus">+</div>
+                    <div class="dropArea row6column2"></div>
+                    <div class="operatorEqual">=</div>
+                    <div class="finalColour row6column3 chartreuse">
+                        <p>Chartreuse <br> Green</p>
+                    </div>
+                    <div class="trueCheck trueCheck6"></div>
+                </div>
+                <!-- ------------------------------------------------- -->
+                <div class="row row7">
+                    <div class="dropArea row7column1"></div>
+                    <div class="operatorPlus">+</div>
+                    <div class="dropArea row7column2"></div>
+                    <div class="operatorEqual">=</div>
+                    <div class="finalColour row7column3 azure">
+                        <p>Azure</p>
+                    </div>
+                    <div class="trueCheck trueCheck7"></div>
+                </div>
+                <!-- ------------------------------------------------- -->
+                <div class="row row8">
+                    <div class="dropArea row8column1"></div>
+                    <div class="operatorPlus">+</div>
+                    <div class="dropArea row8column2"></div>
+                    <div class="operatorEqual">=</div>
+                    <div class="finalColour row8column3 violet">
+                        <p>Violet</p>
+                    </div>
+                    <div class="trueCheck trueCheck8"></div>
+                </div>
+                <!-- ------------------------------------------------- -->
+                <div class="row row9">
+                    <div class="dropArea row9column1"></div>
+                    <div class="operatorPlus">+</div>
+                    <div class="dropArea row9column2"></div>
+                    <div class="operatorEqual">=</div>
+                    <div class="finalColour row9column3 rose">
+                        <p>Rose</p>
+                    </div>
+                    <div class="trueCheck trueCheck9"></div>
+                </div>
+                <!-- ------------------------------------------------- -->
+            </div>
+        </div>
+    </div>
+  
+        <!-- The Modal 
+        <div id="helpModal" class="modal">
+
+           
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <section class="learnMixing__p">
+                    <p>The star shows how to mix colours in our game. Basic colours are <span class="red">RED</span>, <span class="blue">BLUE</span> and <span class="green">GREEN</span>. You can not create these colours.</p>
+                    <p>But you an create any other colour! If you want <span class="yellow">YELLOW</span>, you mix <span class="red">RED</span> and <span class="green">GREEN</span>. </p>
+                    <p>Notice the size of colour triangles. It helps you to navigate what colours to mix. If you want <span class="orange">ORANGE</span>, you mix <span class="red">RED</span> and <span class="yellow">YELLOW</span> etc.</p>
+                        </section>
+                <div class="imgModal"><img src="img/colour-wheel.png" alt=""></div>
+
+            </div>
+        </div>
+      
+-->
+
+<section class="learnMixing__p" id="help">
+    <p>The star shows how to mix colours in our game. Basic colours are <span class="red">RED</span>, <span class="blue">BLUE</span> and <span class="green">GREEN</span>. You can not create these colours.</p>
+    <p>But you an create any other colour! If you want <span class="yellow">YELLOW</span>, you mix <span class="red">RED</span> and <span class="green">GREEN</span>. </p>
+    <p>Notice the size of colour triangles. It helps you to navigate what colours to mix. If you want <span class="orange">ORANGE</span>, you mix <span class="red">RED</span> and <span class="yellow">YELLOW</span> etc.</p>
+</section>
+<div class="learnMixing__img">
+    <img src="img/colour-wheel.png" alt="" id="avatar1">
+</div>
+
+    <script src="jquery/jquery-3.2.1.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

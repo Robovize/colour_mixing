@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Intro - Colour Mixing</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="intro-wrapper">
+        <header class="game-header">
+            <div class="game-header--back-button">
+                <a href="index.html">Back to main menu</a>
+            </div>
+            <div class="game-header--logo"></div>
+        </header>
+
+
+
+        <div class="avatar-selection">
+            <h2>Step 1: Choose your avatar (drag&amp;drop from left to the right)</h2>
+            <div class="intro-portraits">
+
+                <div class="drag-portraits">
+
+                    <div class="intro-portrait" id="avatar1">
+                        
+                            <img src="img/human_female.png" alt="Human Female">
+                        
+                        <b>Human</b>
+                    </div>
+
+                    <div class="intro-portrait" id="avatar2">
+                        <img src="img/human_male.png" alt="Human Male">
+                        <b>Human</b>
+                    </div>
+                    <div class="intro-portrait" id="avatar3">
+                        <img src="img/elf_female.png" alt="Elf Female">
+                        <b>Elf</b>
+                    </div>
+                    <div class="intro-portrait" id="avatar4">
+
+                        <img src="img/elf_male.png" alt="Elf Male">
+                        <b>Elf</b>
+                    </div>
+                    <div class="intro-portrait" id="avatar5">
+                        <img src="img/dwarf_female.png" alt="Dwarf Female">
+                        <b>Dwarf</b>
+                    </div>
+                    <div class="intro-portrait" id="avatar6">
+                        <img src="img/dwarf_male.png" alt="Dwarf Male">
+                        <b>Dwarf</b>
+                    </div>
+                </div>
+                <div class="drop-portraits">
+                    <div class="intro-portrait" id="avatar7">
+                        <div class="drag-portrait" id="dropAvatar"></div>
+                        <b>Your Avatar</b>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+        <div class="start-adventure">
+            <h2>Step 2: Start your adventure!</h2>
+            <div class="map-wrapper">
+                <div class="map">
+                    <div class="mapOne">
+                        <a href="level-one.html">
+                            <h3>START Level 1: Dock</h3>
+                            <img src="" alt="">
+                        </a>
+                    </div>
+                    <div class="mapTwo">
+                            <h3>--> Level 2: Forest</h3>
+                            <img src="" alt="">
+                    </div>
+                    <div class="mapThree">
+                            <h3>--> Level 3: Castle</h3>
+                            <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="jquery/jquery-3.2.1.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+
+
+
+
+/* AVATAR DRAG DROP*/
+
+
+$(document).ready(function () {
+
+$("img").draggable({
+        snap: "#dropAvatar",
+        snapMode: "inner",
+        cursor: "move",
+        helper: function () {
+            return $("<img src=' "+ $(this).attr('src') + " ' alt='Human Male'>");
+        },
+    });
+
+    $("#dropAvatar").droppable({
+        accept: "img",
+        tolerance: "intersect",
+        drop: function (event, ui) {
+            $(this).css("background-image", "url(' " + $(ui.draggable).attr('src') + " ')" ),
+            localStorage.setItem("avatar", $(this).css('background-image'))
+        },
+    });
+    
+});
+    
+    
+    
+    </script>
+
+</body>
+
+</html>

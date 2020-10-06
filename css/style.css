@@ -1,0 +1,837 @@
+html, body, div, span, applet, object, iframe,
+blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+
+  body {
+    display: flex;
+    flex-flow: column wrap;
+    font-family: Verdana;
+    background: url('../img/bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+h1, h2{
+    font-family: Nevis;
+}
+
+
+
+/* ALL PAGES */
+#index-wrapper,
+#intro-wrapper, 
+#levels-wrapper {
+    width: 1366px;
+    margin: 20px auto;
+}
+
+
+
+/* GAME HEADER */
+.game-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.game-header--back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: yellow;
+    height: 70px;
+    width: 20%;
+    border: 1px solid black;
+}
+
+.game-header--back-button a{
+text-decoration: none;
+color: black;
+font-weight: bold;;
+}
+
+.game-header--logo {
+    background: url('../img/logo.png');
+    width: 603px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+/* GAME PANEL */
+.game-panel {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.game-panel--avatar {
+    background: rgba(255, 255, 255, 0.6);
+    border: solid 1px black;
+    padding: 10px;
+    text-align: center;
+    width: 15%;
+}
+
+.game-panel--description {
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.6);
+    border: solid 1px black;
+    width: 70%;
+    padding: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* ************************* INDEX ************************* */
+/* ************************* INDEX ************************* */
+/* ************************* INDEX ************************* */
+#index-wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 1366px;
+    margin: auto;
+}
+
+#index-nav {
+    display: flex;
+}
+
+.index-nav--ul {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.index-nav--ul--li {
+    width: 30%;
+    text-align: center;
+    padding: 50px 100px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    font-weight: bold;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.8);
+}
+
+
+.index-nav--ul--li:hover {
+    width: 30%;
+    text-align: center;
+    padding: 50px 100px;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    font-weight: bold;
+    border-bottom: 20px solid rgba(0, 0, 0, 0.8);
+}
+
+.index-text {
+    text-align: center;
+    margin: 100px;
+}
+
+.index-scoreboard {
+    width: 800px;
+    height: 800px;
+    margin: auto;
+    border: #fff solid 2px;
+}
+
+.index-footer,
+.levelOne-footer {
+    height: 100px;
+    margin: 20px 0;
+    padding: 10px;
+    border: 5px solid #000;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+.footer-text {
+    color: white;
+}
+
+.scoreboardTitle {
+    margin-top: 100px;
+    text-align: center;
+}
+
+
+
+/* ************************* INTRO ************************* */
+/* ************************* INTRO ************************* */
+/* ************************* INTRO ************************* */
+
+.avatar-selection {
+margin: auto;
+}
+
+.intro-portraits {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+}
+
+.drag-portraits {
+    display: flex;
+    justify-content: left;
+    border: 1px solid black;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+}
+
+.drop-portraits {
+    display: flex;
+    justify-content: left;
+    border: 1px solid black;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+}
+
+
+.drag-portrait {
+    width: 128px;
+    height: 128px;
+}
+
+
+
+.intro-portrait {
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid black;
+    margin: 0 5px;
+    padding: 10px;
+}
+
+
+
+.map-wrapper {
+    height: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    background: #A59563;
+    border: 1px solid black;
+}
+
+
+.map {
+    width: 700px;
+    height: 100%;
+    background: url('../img/map.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 100px;
+}
+
+
+.map a{
+    text-decoration: none;
+    color: 
+    black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* LEFT PANEL */
+
+#leftPanel {
+    background: #F2DAC1;
+    border-right: 10px solid #704622;
+}
+
+#leftPanel #colourSquares {
+    display: grid;
+    grid-template-columns: repeat(1, 100px);
+    grid-template-rows: repeat(6, 100px);
+    grid-gap: 10px;
+    padding: 10px 0 0 30px;
+    justify-content: left;
+}
+
+#leftPanel .dragArea {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+/* ************************* LEVEL ONE ************************* */
+/* ************************* LEVEL ONE ************************* */
+/* ************************* LEVEL ONE ************************* */
+
+/* LEVEL ONE LEFT PANEL*/
+#level-one {
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr;
+    padding: 10px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.6);
+
+}
+
+#levelOne-leftPanel {
+    background: #F2DAC1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
+
+#levelOne-leftPanel #colourSquares {
+    display: grid;
+    grid-template-columns: repeat(1, 100px);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 10px;
+    padding: 10px 0 0 30px;
+    justify-content: center;
+}
+
+#levelOne-leftPanel .dragArea {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+/* LEVEL ONE RIGHT PANEL*/
+#levelOne-rightPanel{
+    display: grid;
+    grid-template-rows: repeat(3, 75px);
+    grid-gap: 10px;
+    padding: 10px;
+    background: #F2DAC1;
+    height: 700px;
+    justify-content: center;
+    align-content: center;
+}
+
+#levelOne-rightPanel .dropArea, #levelOne-rightPanel .finalColour {
+    display: grid;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+/* ************************* LEVEL TWO ************************* */
+/* ************************* LEVEL TWO ************************* */
+/* ************************* LEVEL TWO ************************* */
+
+/* LEVEL ONE LEFT PANEL*/
+#level-two {
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr;
+    padding: 10px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+#levelTwo-leftPanel {
+    background: #F2DAC1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
+
+#levelTwo-leftPanel #colourSquares {
+    display: grid;
+    grid-template-columns: repeat(1, 100px);
+    grid-template-rows: repeat(6, 100px);
+    grid-gap: 10px;
+    padding: 10px 0 0 30px;
+    justify-content: center;
+}
+
+#levelTwo-leftPanel .dragArea {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+
+
+
+/* LEVEL TWO RIGHT PANEL*/
+#levelTwo-rightPanel{
+    display: grid;
+    grid-template-rows: repeat(6, 75px);
+    grid-gap: 10px;
+    padding: 10px;
+    background: #F2DAC1;
+    height: 700px;
+    justify-content: center;
+    align-content: center;
+}
+
+#levelTwo-rightPanel .dropArea, #levelTwo-rightPanel .finalColour {
+    display: grid;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ************************* LEVEL THREE ************************* */
+/* ************************* LEVEL THREE ************************* */
+/* ************************* LEVEL THREE ************************* */
+
+
+/* LEVEL ONE LEFT PANEL*/
+#level-three {
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr;
+    padding: 10px;
+    border: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+#levelThree-leftPanel {
+    background: #F2DAC1;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
+
+#levelThree-leftPanel #colourSquares {
+    display: grid;
+    grid-template-columns: repeat(1, 100px);
+    grid-template-rows: repeat(6, 100px);
+    grid-gap: 10px;
+    padding: 10px 0 0 30px;
+    justify-content: center;
+}
+
+#levelThree-leftPanel .dragArea {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+
+
+
+/* LEVEL TWO RIGHT PANEL*/
+#levelThree-rightPanel{
+    display: grid;
+    grid-template-rows: repeat(9, 75px);
+    grid-gap: 10px;
+    padding: 10px;
+    background: #F2DAC1;
+    height: 800px;
+    justify-content: center;
+    align-content: center;
+}
+
+#levelThree-rightPanel .dropArea, #levelThree-rightPanel .finalColour {
+    display: grid;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#gameInfo{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+#gameInfo h2{
+    text-align: center;
+    font-size: 20px;
+    margin: 20px 0 20px 0;
+    text-decoration: underline;
+}
+#gameInfo #scoreboardGrid{
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    grid-gap: 10px;
+    border: 1px solid black;
+    justify-content: center;
+    padding: 10px;
+}
+#gameInfo p{
+text-align: center;
+}
+
+
+
+
+
+/* RIGHT PANEL */
+
+#rightPanel {
+    display: grid;
+    grid-template-rows: repeat(11, 75px);
+    grid-gap: 10px;
+    padding: 10px;
+    background: #F2DAC1;
+}
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(6, 75px);
+}
+
+#rightPanel .dropArea, #rightPanel .finalColour {
+    display: grid;
+    border: 1px solid black;
+}
+
+
+
+.operatorPlus,
+.operatorEqual,
+.trueCheck {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.red{
+    background: red;
+}.green{
+    background: #00FF00;
+}.blue{
+    background: blue;
+}.cyan{
+    background: cyan;
+}.magenta{
+    background: magenta;
+}.yellow{
+    background: yellow;
+}.orange{
+    background: orange;
+}.chartreuse{
+    background: chartreuse;
+}.springGreen{
+    background: springgreen;
+}.azure{
+    background: #007fff;
+}.violet{
+    color: white;
+    background: rgb(127, 0, 255);
+}.rose{
+    background: #ff007f;
+}
+
+.finalColour p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.6;
+    line-height: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+
+.helper {
+    width: 75px;
+    height: 75px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid black;
+}
+
+
+
+
+/* ************************* LEARN MIXING ************************* */
+/* ************************* LEARN MIXING ************************* */
+/* ************************* LEARN MIXING ************************* */
+
+
+
+.learnMixing__img {
+    border: #000 1px solid;
+    margin: auto;
+}
+
+.learnMixing__p {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.6);
+    border: solid 1px black;
+    padding: 1rem;
+    margin: auto;
+    width: 830px;
+}
+
+
+.levelOne-nextRound__button{
+    background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    border: 5px solid red;
+    text-align: center;
+    text-decoration: none;
+    width: 95%;
+    display: none;
+    line-height: 2rem;
+}
+
+.levelOne-nextRound__button:hover{
+    background-color: red;
+    color: white;
+    background: red;
+    padding: 14px 25px;
+    border: 5px solid red;
+    text-align: center;
+    text-decoration: none;
+    width: 95%;
+    line-height: 2rem;
+}
+
+
+table {
+    margin: 20px;
+    width: 760px;
+}
+
+td {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+th {
+    text-align: left;
+    padding: 20px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+
+.mapOne {
+    display: flex;
+    position: relative;
+    top: 120px;
+    left: 250px;
+    width: 400px;
+
+}
+
+.mapOne a{
+    display: flex;
+    background: rgba(255, 255, 255, 0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.mapTwo {
+    position: relative;
+    top: 200px;
+    left: 150px;
+}
+
+.mapThree {
+    position: relative;
+    top: 400px;
+    left: 550px;
+}
+
+
+.drag-portrait {
+    background-repeat: no-repeat;
+}
+.game-avatar {
+    background-repeat: no-repeat;
+    height: 128px;
+    background-position: center;
+}
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; 
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .imgModal {
+      display: flex;
+      justify-content: center;
+  }

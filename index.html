@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Colour Mixing - Game</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <div id="index-wrapper">
+        <header>
+            <div class="index-text">
+                <h1>The World of ColourMixing needs you!</h1>
+                <p>Help us to save the world by mixing the right colours. Before you start the game, you can visit our
+                    <b>Learn Mixing</b> page to see how to mix colours to win the game.</p>
+            </div>
+
+            <nav id="index-nav">
+                <ul class="index-nav--ul">
+                    <a href="intro.html" class="index-nav--ul--li">
+                        <li>Start game</li>
+                    </a>
+
+                    <a href="learn-mixing.html" class="index-nav--ul--li">
+                        <li>How To Play</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <h2 class="scoreboardTitle">Scoreboard</h2>
+    <section class="index-scoreboard">
+
+
+        <table id="scoreboard">
+
+        </table>
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+    <script src="jquery/jquery-3.2.1.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script>
+
+
+    const highscores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+    const displayList = document.getElementById("scoreboard");
+    highscores.forEach(obj => {
+    displayList.innerHTML += "<tr><td id='lNameOne'> " + obj.name + " </td> <td id='lScoreOne'>" + obj.score + "</td></tr>";
+});
+</script>
+</body>
+
+</html>
+
+
+
